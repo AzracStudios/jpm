@@ -29,4 +29,4 @@ Adding custom templates:
 
 
 
-**Happy Coding!{color:Green}**
+**Happy Coding!**
