@@ -12,7 +12,7 @@ Installation:
 * With that, you are all good to go! 
 
 Creating a project:
-* In an empty direactory, run the command **cwp**
+* In an empty direactory, run the command ```$ cwp```
 * Next, select a project template
 * And then, choose wether you want to initialize a git repository
 
