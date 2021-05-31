@@ -1,0 +1,33 @@
+{
+  "name": "@azrac/create-web-app",
+  "version": "1.0.0",
+  "description": "A CLI to create web applications",
+  "main": "src/index.js",
+  "bin": {
+    "@azrac/create-web-app": "bin/create-web-app",
+    "create-web-app": "bin/create-web-app",
+    "cwp": "bin/create-web-app"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "create-web-app",
+    "cwp"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "arg": "^5.0.0",
+    "chalk": "^4.1.1",
+    "esm": "^3.2.25",
+    "execa": "^5.0.1",
+    "inquirer": "^8.1.0",
+    "listr": "^0.14.3",
+    "ncp": "^2.0.0",
+    "pkg-install": "^1.0.0"
+  }
+}

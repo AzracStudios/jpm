@@ -1,0 +1,1 @@
+Run npm install; npm link to use the command cwp globally
