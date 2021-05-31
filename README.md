@@ -18,7 +18,7 @@ Creating a project:
 * And then, choose wether you want to initialize a git repository
 
 Adding custom templates:
-* In the (cli.js)[https://github.com/AzracStudios/create-web-app/blob/master/src/cli.js] file, add the name of the template to the choices array.
+* In the [cli.js](https://github.com/AzracStudios/create-web-app/blob/master/src/cli.js) file, add the name of the template to the choices array.
 * ```Javasript let choices = ["Web", "Web - Scss", "JavaScript", "TypeScript", "React App", "Next App", "Strapi"] ```
 * Inside the templates directory, create a new folder and give it the same name as the template that you added to the choices array, but make sure that the name is in lower case.
 * ```$ mkdir templates/strapi```
