@@ -27,4 +27,6 @@ Adding custom templates:
 * Make changes to the code if needed
 * And that's it!
 
-Happy Coding!
+
+
+**Happy Coding!{color:Green}**
