@@ -8,8 +8,7 @@ Create web app is a powerfull CLI tool that helps you in creating web projects q
 
 Installation:
 * In an empty directory, clone this repository with the command
- ```$ git clone https://github.com/AzracStudios/create-web-app ```
- 
+* ```$ git clone https://github.com/AzracStudios/create-web-app ```
 * Then run **npm install** to install all dependencies and **npm link** to make the command **cwp** available globally
 * With that, you are all good to go! 
 
