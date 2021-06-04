@@ -66,10 +66,6 @@ export async function createProject(options) {
         projectInstall({
           cwd: options.targetDirectory,
         }),
-      skip: () =>
-        !options.runInstall
-          ? "Pass '--install' to automatically install dependencies"
-          : undefined,
     },
   ]);
 

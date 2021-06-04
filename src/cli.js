@@ -2,73 +2,45 @@ import arg from "arg";
 import inquirer from "inquirer";
 import { createProject } from "./main.js";
 
-let choices = ["Web", "Web - Scss", "JavaScript", "TypeScript", "React App", "Next App"]
-
-function parse(rawArgs) {
-  const args = arg(
-    {
-      "--git": Boolean,
-      "--yes": Boolean,
-      "--install": Boolean,
-      "-g": "--git",
-      "-y": "--yes",
-      "-i": "--install",
-    },
-    {
-      argv: rawArgs.slice(2),
-    }
-  );
-
-  return {
-    skipPrompts: args["--yes"] || false,
-    git: args["--git"] || false,
-    template: args._[1],
-    runInstall: args["--install"] || true,
-    name: args._[0],
-  };
-}
-
+let template = [
+  "Web - Css",
+  "Web - Scss",
+  "Web - Sass",
+  "Web - Bootstrap",
+  "Web - PWA",
+  "Electron App",
+  "Express App",
+  "React App",
+  "Next App",
+];
 
 async function prompt(options) {
-  const defaultTemplate = "JavaScript";
-  if (options.skipPrompts) {
-    return {
-      ...options,
-      template: options.template || defaultTemplate,
-    };
-  }
-
   const questions = [];
 
-  if (!options.template) {
-    questions.push({
-      type: "list",
-      name: "template",
-      message: "Project template",
-      choices: choices,
-      default: defaultTemplate,
-    });
-  }
+  questions.push({
+    type: "list",
+    name: "template",
+    message: "Project template",
+    choices: template,
+    default: template[0],
+  });
 
-  if (!options.git) {
-    questions.push({
-      type: "confirm",
-      name: "git",
-      message: "Would you like to initialize a git repository?",
-      default: false,
-    });
-  }
+  questions.push({
+    type: "confirm",
+    name: "git",
+    message: "Would you like to initialize a git repository?",
+    default: false,
+  });
 
   const answers = await inquirer.prompt(questions);
   return {
-    ...options,
-    template: options.template || answers.template,
-    git: options.git || answers.git,
+    template: answers.template,
+    git: answers.git,
   };
 }
 
 export async function cli(args) {
-  let options = parse(args);
+  let options;
   options = await prompt(options);
   await createProject(options);
 }
