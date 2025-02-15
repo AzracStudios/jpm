@@ -1,4 +1,4 @@
-CWP is a powerfull CLI tool that helps you in creating web projects quickly. The available project templates are:
+CWP is a CLI tool that helps you in creating web projects quickly. This project was built to understand how CLIs work. The available project templates are:
 * **Web CSS** (Simple Html project with css for styling)
 * **Web SCSS** (Simple Html project with scss for styling)
 * **Web SASS** (Simple Html project with sass for styling)
